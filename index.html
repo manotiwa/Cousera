@@ -5,8 +5,9 @@
       <title>Home Cousera</title>
       <!-- <script type="text/javascript" src="angular.min.js"> </script> -->
       <script src="angular.min.js"></script>
+      <script async src="//jsfiddle.net/itsselvam/9sL7s7ox/embed/"></script>
   </head>
-  <body ng-app="">
+  <body ng-app="" style="background-color: {{colorName}}">
     <h1>Hello Cousera Students!</h1>
 
     <div class=""  >
@@ -26,6 +27,22 @@
     		{{color }}
 
     		<br/>
-    		</div>
+    </div>
+
+    <br/>
+		 <div style="width: 25%">
+                    Name: <input type="text" style="background-color: {{color}}"><br/>
+                    Color: <input name="Color Picker" type="color" ng-model="colorName"/>
+                </div>
+
+
+                <div style="width: 25%">
+                    Name: <input type="text" ng-model="username"><br/>
+                    <span>{{ "My Name: " + username }}</span>
+                </div>
+
+            </div>
+        </div>
+
   </body>
 </html>
