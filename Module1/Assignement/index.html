@@ -12,42 +12,13 @@
 
     <div class=""  >
       Name: <input type="text" ng-model="username"><br/>
-		{{ "My Name: " + username }}
+		    {{ "My Name: " + username }}
 
     </div>
+
     <div>
-    		Select color
-    		<select ng-model="color">
-      		<option>Red</option>
-      		<option>Blue</option>
-      		<option>Green</option>
-      		<option>Yellow</option>
-          <option>Black</option>
-          <option>Grey</option>
-          <option>Silver</option>
-    		</select>
 
-        <br/>
-
-        Selected Color :  {{color }}
-
-    		<br/>
     </div>
-
-    <br/>
-		 <div style="width: 25%">
-                    Name: <input type="text" style="background-color: {{color}}"><br/>
-                    Color: <input name="Color Picker" type="color" ng-model="colorName"/>
-                </div>
-
-
-                <div style="width: 25%">
-                    Name: <input type="text" ng-model="username"><br/>
-                    <span>{{ "My Name: " + username }}</span>
-                </div>
-
-            </div>
-        </div>
 
   </body>
 </html>
