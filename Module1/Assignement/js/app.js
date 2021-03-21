@@ -30,12 +30,16 @@ function () {
                 $scope.message = "Please enter data first";
 				 $scope.red_opacity = '';
                  $scope.green_opacity = '';
+				$scope.lblStyle= {"color" : "red","border": "2px solid red", "border-radius": "5px", "padding": "25px" };					  
+				 
             }
             else 
             {
                 $scope.message = counter< 4? 'Enjoy!' : 'Too much!';
 				 $scope.green_opacity = counter<= 3? 'opaque' : '';
-				 $scope.red_opacity = counter > 3? 'opaque' :  '';				
+				 $scope.red_opacity = counter > 3? 'opaque' :  '';
+				 
+				 $scope.lblStyle=counter<= 3? {"color" : "green","border": "2px solid green", "border-radius": "5px", "padding": "25px"}: {"color" : "red","border": "2px solid red", "border-radius": "5px", "padding": "25px"};
             };
 			 
         };
