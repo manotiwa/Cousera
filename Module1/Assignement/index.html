@@ -1,43 +1,29 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-      <meta charset="utf-8">
-      <title>Home Cousera</title>
-      <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-      <!-- <script type="text/javascript" src="angular.min.js"> </script> -->
-      <script type="text/javascript" src="app.js"></script>
-      <script src="angular.min.js"></script>
-      <script async src="//jsfiddle.net/itsselvam/9sL7s7ox/embed/"></script>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
   </head>
-  <body ng-app="" style="background-color: {{colorName}}">
-    <div class="jumbotron text-center">
-    <h1>Hello Cousera Students!!</h1>
-I am thrilled about this cource for coursera...
-</div>
-<div class="container">
+<body>
+   <div class="container">
+     <h1>Lunch Checker</h1>
 
-  <div class="row">
-      <div class="col-sm-4">
-        <h3>Lecture 1</h3>
-        <p>  Name: <input type="text" ng-model="username"><br/></p>
-        <p>{{ "My Name: " + username }}</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>Lecture 2</h3>
-        <p><input type="text" ng-model="colorName"></p>
-        <p>{{"My selected color:"+ colorName }}</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>Lecture 3</h3>
-        <p>Your Name : <input type="text" id="name"></p>
-        <p><div id="output"></div></p>
-      </div>
-    </div>
-</div>
-  </body>
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <!-- Your message can go here. -->
+         </div>
+   </div>
+
+</body>
 </html>
