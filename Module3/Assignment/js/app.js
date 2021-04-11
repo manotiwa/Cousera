@@ -33,21 +33,26 @@ function NarrowItDownController(MenuSearchService)
     {
       menu.showMsg = true;
     }
+	else
+	{
 
-    var promise = MenuSearchService.getMatchedMenuItems(menu.searchItemDesc);
+		var promise = MenuSearchService.getMatchedMenuItems(menu.searchItemDesc);
 
-    promise.then(function(response)
-    {
-      console.log("Response data:",response);
-      if(response.length === 0)
-      {
-        menu.showMsg = true;
-      }
-      menu.menu_items = response;
-    })
-    .catch(function(error){
-        console.log("Something went terribly wrong.");
-      });
+		promise.then(function(response)
+		{
+		  console.log("Response data:",response);
+		  if(response.length === 0)
+		  {
+			menu.showMsg = true;
+		  }
+		  menu.menu_items = response;
+		})
+		.catch(function(error){
+			console.log("Something went terribly wrong.");
+		  });
+		  
+		  
+	}
     };
 
     menu.RemoveItem = function(index)
