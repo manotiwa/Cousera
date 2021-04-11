@@ -32,8 +32,7 @@
 		
 		 <div id="menu" ng-controller="NarrowItDownController as menu">
      
-			  <input type="text" ng-model="menu.searchItemDesc" placeholder="Search Text">
-			  <input type="text" placeholder="search term" class="form-control">
+			  <input type="text" ng-model="menu.searchItemDesc" placeholder="Search Term" class="form-control">			  
 			  <button ng-click="menu.getData()">Narrow It Down For Me!</button>
 			  <h1 ng-show="menu.showMsg">Nothing Found!!!</h1>
 			  <found-items-list items="menu.menu_items" remove="menu.RemoveItem(index);"> </found-items-list>
