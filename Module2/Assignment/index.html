@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Shopping List Check Off</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/style.css">
+    <style>
+      .emptyMessage {
+        font-weight: bold;
+        color: red;
+        font-size: 1.2em;
+      }
+      li {
+        margin-bottom: 7px;
+        font-size: 1.2em;
+      }
+      li > button {
+        margin-left: 6px;
+      }
+      button > span {
+        color: green;
+      }
+	  
+	   .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+<body ng-app="CheckOffShoppingList">
+  <div class="container">
+  <h1>Shopping List Check Off</h1>
+
+  <div class="col-md-12">
+
+    <!-- To Buy List -->
+    <div class="col-md-6 form-group"  ng-controller="ToBuyShoppingController as shopping">
+     <h2>To Buy:</h2>
+     <ul>
+       <li ng-repeat='item in shopping.buy_items'>Buy {{ item.quantity }} {{ item.name }}
+				<button class="btn btn-default" ng-click='shopping.addToBoughtList($index)'>
+					<span class="glyphicon glyphicon-ok"></span> Bought
+				</button>
+		</li>
+       
+	   <!-- <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li> -->
+     </ul>
+     <div class="emptyMessage" ng-if='shopping.buy_items.length == 0'>Everything is bought!</div>
+    </div>
+
+    <!-- Already Bought List -->
+    <div class="col-md-6  form-group" ng-controller='AlreadyBoughtShoppingController as bought'>
+     <h2>Already Bought:</h2>
+     <ul>
+       <li ng-repeat='item in bought.bought_items'>Bought {{ item.quantity }} {{ item.name }}	  
+	   </li>
+     </ul>
+     <div class="emptyMessage"  ng-if='bought.bought_items.length == 0'>Nothing bought yet.</div>
+    </div>
+  </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+
+</html>
