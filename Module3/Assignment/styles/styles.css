@@ -22,6 +22,22 @@ body{
 	
 }
 
+.resultContainer{
+
+overflow-y: scroll; /* Add the ability to scroll */
+}
+
+.resultContainer::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.resultContainer {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
 
 .circle{
     width: 75px;
