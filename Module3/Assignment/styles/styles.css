@@ -1,17 +1,18 @@
 *{
     margin: 0;
-    font-size: 1.1em;
+    font-size: 0.1em;
 }
 body{
     background-image: url(./Sales.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
+	height: 90vh;
 }
 
 
 .container{
-    height: 100vh;
+   
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
