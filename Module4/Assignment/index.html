@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome To MT-Restaurant Menu App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css"> -->
+	<link rel="stylesheet" href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css">
+	
+    <style>
+	body{ margin: 5px; }
+    
+	.jumbotron .btn { margin: 5px; }
+	
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	  text-decoration:none;
+	}
+
+	li {
+	  float: right;
+	  text-decoration:none;
+	  color:white;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 26px;
+	  text-decoration: none !important;	  
+	}
+
+	li a:hover:not(.active) {
+	  background-color: #111;
+	}
+
+	.active {
+	  background-color: #4CAF50;
+	}
+	.h{ float:left; vertical-align:middle !important; color:white;padding-top:10px;padding-left:10px;}
+	
+    </style>    
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <!-- <nav>			 -->
+                <ul>
+					<li class="h"><h3>Restaurant Menu App</h3></li>
+                    <li ui-sref-active="active" ui-sref="categories" role="presentation"><h2><a href="#">Categories</a></h2></li>
+					<li ui-sref-active="active" ui-sref="home" role="presentation"><h2><a class="active" href="#">Home</a></h2></li>
+                </ul>
+            <!-- </nav> -->
+            
+        </div>
+        <ui-view></ui-view>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="modules/menuapp.module.js"></script>
+    <script src="modules/data.module.js"></script>
+    <script src="controllers/categories.controller.js"></script>
+    <script src="controllers/items.controller.js"></script>
+    <script src="services/menudata.service.js"></script>
+    <script src="components/categories.component.js"></script>
+    <script src="components/items.component.js"></script>
+    <script src="routes/routes.js"></script>
+    <script src="templates/home.template.html"></script>
+    <script src="templates/categories.component.html"></script>
+    <script src="templates/categories.template.html"></script>
+    <script src="templates/items.component.html"></script>
+    <script src="templates/items.template.html"></script>
+</body>
+
+</html>
