@@ -121,7 +121,7 @@ function MenuService($http, ApiPath) {
     // return $http.get(ApiPath + '/menu_items/' + short_name + '.json');
   // }
   
-  service.getMenuItem = function(shortName) {
+  service.getFavoriteDish = function(shortName) {
     return $http.get(ApiPath + '/menu_items/' + shortName + '.json')
     .then(function(response) {
       return response.data;
